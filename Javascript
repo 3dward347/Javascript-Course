@@ -148,7 +148,7 @@ console.log('23' + '10' + 3);
 console.log('23' / '2');
 
 let n = '1' + 1; //creates string 11 due to +
-n = n - 1; //turns string into number due to - 
+n = n - 1; //turns string into number due to -
 console.log(n);
 
 
@@ -194,7 +194,88 @@ if (favourite === 23) {
 }
 
 if (favourite !== 23) console.log('why not 23?');
+
+
+const hasDriversLicense = true;
+const hasGoodVision = false;
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+
+// if (hasDriversLicense && hasGoodVision) {
+//     console.log('Sarah is able to drive!');
+// } else {
+//     console.log('Someone else should drive!');
+// }
+
+const isTired = true;
+
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive!');
+} else {
+    console.log('Someone else should drive!');
+}
+
+
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+
+if (scoreDolphins > scoreKoalas) {
+    console.log('Dolphins win the trophy');
+} else if (scoreKoalas > scoreDolphins) {
+    console.log('Koalas win the trophy');
+} else if (scoreDolphins === scoreKoalas) {
+    console.log('Both win the trophy');
+}
+
+
+const day = 'thursday';
+
+switch (day) {
+    case 'monday': //day === monday
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'teusday':
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('write code example');
+        break;
+    case 'friday':
+        console.log('record videos');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('enjoy the weekend');
+        break;
+    default:
+        console.log('not a valid day');
+}
+
+if (day === 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+} else if (day === 'teusday') {
+    console.log('Prepare theory videos');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('write code example');
+} else if (day === 'friday') {
+    console.log('record videos');
+} else if (day === 'saturday' || day === 'sunday') {
+    console.log('enjoy the weekend');
+} else {
+    console.log('not a valid day');
+}
 */
+
+
+
 
 //assignment//
 
@@ -203,9 +284,9 @@ const continent = 'Europe';
 let population = 70000000;
 let isIsland = false;
 let language = 'English';
-
 isIsland = true;
 
+/*
 console.log(typeof country)
 console.log(typeof continent)
 console.log(typeof population)
@@ -248,3 +329,34 @@ if (numNeighbours === 1) {
 } else {
     console.log('no borders');
 }
+
+
+// English true, > 50m true, island false
+
+
+if (population > 50000000 && language === 'English' && !isIsland) {
+    console.log('country is right');
+} else {
+    console.log(`${country} is not right, find a new country.`);
+}
+
+
+switch (language) {
+    case 'Chinese' || 'Mandarin':
+        console.log('MOST number of native speakers!');
+        break;
+    case 'Spanish':
+        console.log('2nd place in number of native speakers');
+        break;
+    case 'English':
+        console.log('3rd place');
+        break;
+    case 'Hindi':
+        console.log('number 4');
+        break;
+    case 'Arabic':
+        console.log('5th most spoken language');
+    default:
+        console.log('Great language too');
+}
+*/
