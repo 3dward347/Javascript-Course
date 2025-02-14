@@ -131,7 +131,109 @@ console.log(ages);
 
 const y = new Array(1991, 1984, 2008, 2020);
 console.log(y);
+
+
+
+
+const friends = ['Micheal', 'Steven', 'Peter'];
+const newLength = friends.push('Jay'); //adds to end of array
+console.log(friends);
+console.log(newLength);
+
+friends.unshift('John'); // adds john to start of array
+console.log(friends);
+
+friends.pop();  //removes last
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); //removes first
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Bob')); //returns -1 because no in array
+
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob')); //Bob is not in array so returns false
+
+friends.push(23);
+console.log(friends.includes(23));
+
+if (friends.includes('Steven')) {
+    console.log('You have a friend called Steven');
+}
+
+const calcTip = function (bill) {
+    return bill >= 50 && <= 300 ? bill * 0.15 : bill * 0.2;
+}
+//arrow function version
+// const calcTip = bill >=50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+const bills = [123, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(bills, tips);
+
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[3] + tips[2]]
+console.log(totals);
+
+
+
+const jonasArray = [
+    'Jonas',
+    'Schmedmann',
+    2037 - 1991,
+    'teacher',
+    ['Micheal', 'Peter', 'Steven']
+];
+
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Micheal', 'Peter', 'Steven']
+};
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends.')
+console.log(jonas[interestedIn]); // cant use dot notation here because interestedIn is not apart of jonas, instead ose bracket notation
+if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+} else {
+    console.log('wrong request!')
+}
+
+jonas.location = 'portugal';
+jonas['twitter'] = '@...';
+console.log(jonas);
+
+
+
+const jonas = {
+    name: 'Jonas',
+    bestFriend: 'Micheal',
+    friends: ['Micheal', 'Peter', 'Jay']
+}
+
+console.log(`${jonas.name} has ${jonas.friends.length} friends, and his best friend is called ${jonas.bestFriend}`);
 */
+
+
+
+
+
+
+
+
 
 // asignments
 /*
@@ -201,7 +303,7 @@ function checkWinner(avgKoalas, avgDolphins) {
 }
 
 checkWinner(scoreDolphins, scoreKoalas);
-*/
+
 
 const populations = [70, 60, 50, 40];
 
@@ -213,3 +315,35 @@ function percentageOfWorld1(population) {
 
 const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])];
 console.log(percentages);
+
+
+
+
+const neighbours = ['Japan', 'Korea', 'Thailand'];
+neighbours.push('Utopia');
+neighbours.pop();
+
+if (neighbours.includes('Germany')) {
+    console.log('European country');
+} else {
+    console.log('Not a European country');
+}
+
+const koreaIndex = neighbours.indexOf('Korea');
+console.log(koreaIndex);
+
+neighbours[1] = 'Indonesia';
+
+console.log(neighbours);
+
+
+const myCountry = {
+    coutry: 'England',
+    capital: 'London',
+    language: 'English',
+    population: 70,
+    neighbours: ['Scotland', 'Wales', 'Ireland']
+};
+
+console.log(`${myCountry.coutry} has ${myCountry.population} million ${myCountry.language} people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`)
+*/
